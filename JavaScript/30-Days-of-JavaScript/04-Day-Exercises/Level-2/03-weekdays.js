@@ -13,6 +13,7 @@
     El viernes es un día laborable.
 
 */
+let day = prompt("¿Qué día es hoy?").trim().toLowerCase();
 
 if (day === "sábado" ||day === "sabado" ||day === "domingo") {
     console.log(`El ${day} es fin de semana.`);
