@@ -36,7 +36,7 @@ for (let i = 0; i <= 10; i++) {
   console.log(`${i} x ${i} = ${i * i}`);
 }
 
-/* Usando un bucle imprime el siguiente patrón:
+/* 6. Usando un bucle imprime el siguiente patrón:
 
  i    i^2   i^3
  0    0     0
