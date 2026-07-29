@@ -30,5 +30,13 @@ console.log("Matriz con 5 números aleatorios únicos:", numUnique);
     5j2khz
 
 */
+const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
 
+let randomId = "";
 
+for (let i = 0; i < 6; i++) {
+    let randomIndex = Math.floor(Math.random() * characters.length);
+    randomId += characters[randomIndex];
+}
+
+console.log("ID aleatorio:", randomId);
