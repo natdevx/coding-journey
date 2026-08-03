@@ -16,8 +16,8 @@ const countries = [
 
 let countriesReverse = [];
 
-for(let i = countries.length -1 ; i>=0; i--){        
-    countriesReverse.push(countries[i].toUpperCase());
-  }
+for (let i = countries.length - 1; i >= 0; i--) {
+  countriesReverse.push(countries[i].toUpperCase());
+}
 
-console.log("El array invertido de paises: ",countriesReverse);
+console.log("El array invertido de paises: ", countriesReverse);
