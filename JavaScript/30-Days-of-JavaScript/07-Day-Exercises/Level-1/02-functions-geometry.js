@@ -39,7 +39,7 @@ console.log(volumeOfRectPrism(6, 9, 7));
 console.log("========== Ejercicio 7 ==========");
 
 function areaOfCircle(radius) {
-  let area = 3.14 * radius * radius;
+  let area = Math.PI * radius * radius;
   return `El área del círculo es: ${area}`;
 }
 
@@ -51,7 +51,7 @@ console.log(areaOfCircle(4));
 console.log("========== Ejercicio 8 ==========");
 
 function circumOfCircle(radius) {
-  let circumference = 2 * 3.14 * radius;
+  let circumference = 2 * Math.PI * radius;
   return `La circunferencia del círculo es: ${circumference}`;
 }
 
