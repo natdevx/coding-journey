@@ -15,13 +15,13 @@ console.log("========== Ejercicio 11 ==========");
 
 function sumOfOdds(element) {
   let sum = 0;
+
   for (let i = 1; i <= element; i++) {
-    if (!i % 2 === 0){
+    if (i % 2 !== 0) {
       sum += i;
-    } else {
-      console.log('No hay mas impares que sumar');
     }
   }
+
   return `La suma de los numeros impares: ${sum}`;
 }
 
@@ -33,7 +33,7 @@ console.log("========== Ejercicio 12 ==========");
 function sumOfEven(element) {
   let sum = 0;
   for (let i = 1; i <= element; i++) {
-    if (i % 2 === 0){
+    if (i % 2 === 0) {
       sum += i;
     }
   }
@@ -47,9 +47,38 @@ console.log(sumOfEven(7));
     El número de impares son 50.
     El número de pares es 51.
 */
+console.log("========== Ejercicio 13 ==========");
 
-/* 14. Escriba una función que tome cualquier número de argumentos y retorne la suma de los argumentos
+function evensAndOdds(element) {
+  let countPar = 0;
+  let countImpar = 0;
 
+  for (let i = 0; i <= element; i++) {
+    if (i % 2 === 0) {
+      countPar++;
+    } else {
+      countImpar++;
+    }
+  }
+
+  return `El número de impares son: ${countImpar}
+El número de pares es: ${countPar}`;
+}
+
+console.log(evensAndOdds(100));
+
+/* 14. Escriba una función que tome cualquier número de argumentos y retorne la suma de los argumentos.
     sum(1, 2, 3); // -> 6
     sum(1, 2, 3, 4); // -> 10
 */
+console.log("========== Ejercicio 14 ==========");
+
+function sumAllNumbers(...args) {
+  let sum = 0;
+  for (const element of args) {
+    sum += element;
+  }
+  return `La suma de los argumentos: ${sum}`;
+}
+console.log(sumAllNumbers(1, 2, 3));
+console.log(sumAllNumbers(1, 2, 3, 4));
