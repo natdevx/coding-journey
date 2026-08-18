@@ -91,10 +91,65 @@ console.log(arrayOfHexaColors(3));
 console.log(arrayOfHexaColors(5));
 
 // 4. Escriba una función arrayOfRgbColors que retorna cualquier cantidad de colores RGB en un array.
+console.log("========== Ejercicio 4 ==========");
+
+function arrayOfRgbColors(quantity) {
+  let arrayRgbColors = [];
+
+  for (let i = 0; i < quantity; i++) {
+    let rgbColor = "";
+
+    for (let j = 0; j < 3; j++) {
+      let randomNumber = Math.floor(Math.random() * 256);
+
+      rgbColor += randomNumber;
+
+      if (j < 2) {
+        rgbColor += ",";
+      }
+    }
+
+    rgbColor = `rgb(${rgbColor})`;
+
+    arrayRgbColors.push(rgbColor);
+  }
+
+  return arrayRgbColors;
+}
+
+console.log(arrayOfRgbColors(3));
+console.log(arrayOfRgbColors(5));
 
 // 5. Escriba una función convertHexaToRgb que convierta el color hexa a rgb y retorna un color rgb.
+console.log("========== Ejercicio 5 ==========");
+
+function convertHexaToRgb(colorHexa) {
+  // Eliminar la '#' si existe.
+  let color = colorHexa.replace("#", "");
+
+  // Convertir cada par hexadecimal a decimal.
+  let r = parseInt(color.slice(0, 2), 16);
+  let g = parseInt(color.slice(2, 4), 16);
+  let b = parseInt(color.slice(4, 6), 16);
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+console.log("Color RGB:", convertHexaToRgb("#5A3FD2"));
 
 // 6. Escriba una función convertRgbToHexa que convierta rgb a color hexa y retorna un color hexa.
+console.log("========== Ejercicio 6 ==========");
+
+function convertRgbToHexa(r, g, b) {
+  // Convertir cada componente a hexadecimal y asegurarse de que tenga dos dígitos. 
+  let hexR = r.toString(16).padStart(2, "0");
+  let hexG = g.toString(16).padStart(2, "0");
+  let hexB = b.toString(16).padStart(2, "0");
+
+  return `#${hexR}${hexG}${hexB}`;
+}
+
+console.log("Color Hexa:", convertRgbToHexa(90, 63, 210));
 
 /* 7. Escriba una función generateColors que pueda generar cualquier número de colores hexa o rgb.
     console.log(generateColors("hexa", 3)); // ['#a3e12f', '#03ed55', '#eb3d2b']
@@ -102,3 +157,5 @@ console.log(arrayOfHexaColors(5));
     console.log(generateColors("rgb", 3)); // ['rgb(5, 55, 175)', 'rgb(50, 105, 100)', 'rgb(15, 26, 80)']
     console.log(generateColors("rgb", 1)); // 'rgb(33,79, 176)'
 */
+
+
