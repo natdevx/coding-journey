@@ -141,7 +141,7 @@ console.log("Color RGB:", convertHexaToRgb("#5A3FD2"));
 console.log("========== Ejercicio 6 ==========");
 
 function convertRgbToHexa(r, g, b) {
-  // Convertir cada componente a hexadecimal y asegurarse de que tenga dos dígitos. 
+  // Convertir cada componente a hexadecimal y asegurarse de que tenga dos dígitos.
   let hexR = r.toString(16).padStart(2, "0");
   let hexG = g.toString(16).padStart(2, "0");
   let hexB = b.toString(16).padStart(2, "0");
@@ -157,5 +157,34 @@ console.log("Color Hexa:", convertRgbToHexa(90, 63, 210));
     console.log(generateColors("rgb", 3)); // ['rgb(5, 55, 175)', 'rgb(50, 105, 100)', 'rgb(15, 26, 80)']
     console.log(generateColors("rgb", 1)); // 'rgb(33,79, 176)'
 */
+console.log("========== Ejercicio 7 ==========");
 
+function generateColors(type, quantity) {
+  if (type === "hexa") {
+    const colors = arrayOfHexaColors(quantity);
 
+    if (quantity === 1) {
+      return colors[0];
+    }
+
+    return colors;
+  } else if (type === "rgb") {
+    const colors = arrayOfRgbColors(quantity);
+
+    if (quantity === 1) {
+      return colors[0];
+    }
+
+    return colors;
+  } else {
+    return "Tipo de color no válido. Use 'hexa' o 'rgb'.";
+  }
+}
+
+console.log(generateColors("hexa", 3));
+console.log(generateColors("hexa", 1));
+
+console.log(generateColors("rgb", 3));
+console.log(generateColors("rgb", 1));
+
+console.log(generateColors("blue", 3));
