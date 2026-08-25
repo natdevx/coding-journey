@@ -68,8 +68,39 @@ console.log(sum(2, 4, 6));
 console.log(sum(-1, 2, 3, 4, 5));
 
 // 12. Escriba una función llamada sumOfArrayItems, toma un array como parámetro y retorna la suma de todos los elementos. Compruebe si todos los elementos de la matriz son tipos de números. Si no, dé una respuesta razonable.
+console.log("========== Ejercicio 12 ==========");
+
+function sumOfArrayItems(arr){
+  let sum = 0;
+  for (const element of arr) {
+    if (typeof element !== "number") {
+      return "Todos los elementos del array deben ser números.";
+    }
+    sum += element;
+  }
+  return `La suma total de los elementos del array es: ${sum}`;
+}
+
+console.log(sumOfArrayItems([1, 2, 3, 4, 5]));
+console.log(sumOfArrayItems([1, 2, "3", 4, 5]));
 
 // 13. Escribe una función llamada average, toma un array como parámetro y retorna el promedio de los elementos. Compruebe si todos los elementos de la matriz son tipos de números. Si no, dé una respuesta adecuada.
+console.log("========== Ejercicio 13 ==========");
+
+function average(arr) {
+  let sum = 0;
+  for (const element of arr) {
+    if (typeof element !== "number") {
+      return "Todos los elementos del array deben ser números.";
+    }
+    sum += element;
+  }
+  return `El promedio de los elementos del array es: ${sum / arr.length}`;
+}
+
+console.log(average([1, 2, 3, 4, 5]));
+console.log(average([1, 2, "3", 4, 5]));
+console.log(average([1, 2, 3, 4, 5, 6, 7]));
 
 /* 14. Escriba una función llamada modifyArray que tome un array como parámetro y modifique el quinto elemento del array y retorna el array. Si la longitud del array es inferior a cinco, retorna 'elemento no encontrado'.
     console.log(modifyArray(['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']);
@@ -79,3 +110,17 @@ console.log(sum(-1, 2, 3, 4, 5));
     console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon']);
     'Not Found'
  */
+
+console.log("========== Ejercicio 14 ==========");
+
+function modifyArray(arr) {
+  if (arr.length < 5) {
+    return 'Not Found';
+  }
+  arr[4] = arr[4].toUpperCase();
+  return arr;
+}
+
+console.log(modifyArray(['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']));
+console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon','Microsoft',  'IBM']));
+console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon']));
