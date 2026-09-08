@@ -28,8 +28,8 @@ console.log(haveSixOrMoreCharacters);
 console.log("========== Ejercicio 14 ==========");
 
 const countriesStartsByE = countries.filter(
-    (country) => country.startsWith("e")
-);
+    (country) => country.startsWith("E")
+); 
 
 console.log(countriesStartsByE);
 
